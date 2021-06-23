@@ -45,6 +45,22 @@ function ListNode(val, next) {
  * @param {ListNode} head
  * @return {ListNode}
  */
+
+// function reverseList(head) {
+//   if (!head || !head.next) return head;
+//
+//   let cur = head;
+//   let pre = null;
+//   while (cur) {
+//     const next = cur.next;
+//     cur.next = pre;
+//     pre = cur;
+//     cur = next;
+//   }
+//
+//   return pre;
+// }
+
 var reverseList = function(head) {
   if (!head) {
     return head
