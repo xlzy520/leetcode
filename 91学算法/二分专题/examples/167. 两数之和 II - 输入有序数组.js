@@ -49,10 +49,8 @@ var twoSum = function(numbers, target) {
       }
       if (diff<numbers[mid]) {
         r = mid-1
-  
       } else{
         l=mid+1
-  
       }
     }
   }

@@ -64,6 +64,7 @@ var nextGreatestLetter = function(letters, target) {
       r = mid - 1
     }
   }
+  // 最后，如果插入位置是最后一个位置 letters.length，则返回 letters[0]。这就是模运算的运用。
   return letters[l%len]
 };
 
