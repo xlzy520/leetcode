@@ -53,15 +53,14 @@
  */
 var preorderTraversal = function(root) {
   const ans = []
-  order(root, ans)
+  const preOrder = (root)=> {
+    if (!root) {
+      return
+    }
+    ans.push(root.val)
+    preOrder(root.left)
+    preOrder(root.right)
+  }
+  preOrder(root)
   return ans
 };
-
-var order = (ans, root)=> {
-  if (!root) {
-    return
-  }
-  ans.push(root.val)
-  order(ans, root.left)
-  order(ans, root.rigth)
-}
