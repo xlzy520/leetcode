@@ -43,17 +43,15 @@ var removeDuplicateNodes = function(head) {
   }
   let map = {}
   map[head.val] = 1
-  let pos = head;
-  while (pos.next){
-    let cur = pos.next
+  let cur = head;
+  while (cur && cur.next){
     if (map[cur.val]) {
-      pos.next = pos.next.next
+      cur.next = cur.next.next
     } else {
       map[cur.val] = 1
-      pos = pos.next
     }
+    cur = cur.next
   }
-  pos.next = null
   return head
 };
 
